@@ -1,0 +1,238 @@
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=El+Messiri:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #222;
+}
+
+.container {
+    margin: auto;
+    max-width: 550px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .header {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+    color: #FFF;
+}
+
+@media (max-width:530px) {
+    .container .header {
+        font-size: 25px;
+    }
+}
+
+.container .header p span:nth-child(1) {
+    color: #ffa74a;
+}
+
+.container .header p span:nth-child(2) {
+    color: #42a3ff;
+}
+
+.container .card {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    padding: 20px;
+    margin-top: 50px;
+    border: 2px solid #555;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 15px; */
+    box-shadow: 0 0 20px 5px #ffffff4f;
+    border: 1px solid #b8b8b8;
+}
+
+.card button {
+    position: relative;
+    background-color: #42a3ff;
+    padding: 10px 0;
+    width: 200px;
+    box-shadow: 0 5px 0 0 #0084ff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.card button:active {
+    box-shadow: 0px 0px 0px 0px #216aae;
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+}
+
+#addCard button input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#addCard p {
+    margin-top: 25px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 2px 2px #0000007e;
+    text-align: center;
+}
+
+
+.card img {
+    width: 350px;
+    aspect-ratio: 1/auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0 0 10px 3px #0000004f;
+    margin-bottom: 30px;
+}
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0px 0px 5px #3e3e3e);
+    -webkit-filter: drop-shadow(0px 0px 5px #808080);
+}
+
+.loader:before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0px -5px 0 0 #ff8400 inset;
+    animation: rotate 1s linear infinite;
+    -webkit-animation: rotate 1s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 5px 0 0 #0084ff inset;
+    animation: rotate 1s linear infinite;
+    -webkit-animation: rotate 1s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+button a {
+    color: #FFF;
+}
+
+#downloadCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#downloadCard button {
+    box-shadow: 0 0 10px 5px #6c6c6c inset;
+    width: 40px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin: 0 20px;
+    background-color: transparent;
+    text-align: center;
+    line-height: 40px;
+    -webkit-text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    text-transform: uppercase;
+}
+
+#downloadCard button:hover {
+    scale: 1.05;
+    box-shadow: 0 0 10px 5px #6c6c6c;
+}
+
+#downloadCard img {
+    margin: 0;
+}
+
+@media (max-width:530px) {
+    #downloadCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #downloadCard button {
+        writing-mode: horizontal-tb;
+        text-orientation: sideways;
+        -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: horizontal-tb;
+        -webkit-text-orientation: sideways;
+        width: fit-content;
+        padding: 5px 50px;
+        margin: 10px 0;
+    }
+}
+
+#addCard,
+#displayImage,
+#loadingCard,
+#downloadCard {
+    display: none;
+}
